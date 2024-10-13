@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import laboratories.Flower;
 import laboratories.FlowerBucket;
 import laboratories.FlowerPack;
-import laboratories.Rose;
+import laboratories.FlowerType;
 import java.util.Random;
 
 public class FlowerBucketTest {
@@ -22,7 +22,8 @@ public class FlowerBucketTest {
     @Test
     public void testPrice() {
         int quantity = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
-        Flower flower = new Rose();
+        Flower flower = new Flower();
+        flower.setFlowerType(FlowerType.ROSE);
         flower.setPrice(FLOWER_PRICE);
         FlowerPack flowerPack = new FlowerPack(flower, quantity);
         flowerBucket.add(flowerPack);

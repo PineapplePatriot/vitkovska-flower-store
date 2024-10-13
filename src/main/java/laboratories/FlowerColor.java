@@ -1,17 +1,16 @@
 package laboratories;
 
 public enum FlowerColor {
-    RED("#FF0000"),
-    BLUE("#0000FF"),
-    YELLOW("#FFFF00");
 
-    private final String code;
+    RED("#FF0000"), BLUE("#0000FF");
+    private final String stringRepresentation;
 
-    FlowerColor(String code) {
-        this.code = code;
+    FlowerColor(String stringRepresentation) {
+        this.stringRepresentation = stringRepresentation;
     }
 
-    public String getCode() {
-        return this.code;
+    @Override
+    public String toString() {
+        return stringRepresentation;
     }
 }
