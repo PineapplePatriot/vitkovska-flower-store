@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import laboratories.*;
+import laboratories.Flower;
+import laboratories.FlowerColor;
 import java.util.Random;
 
 import org.junit.jupiter.api.Assertions;

@@ -1,8 +1,10 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
-import laboratories.*;
-
+import laboratories.Flower;
+import laboratories.FlowerBucket;
+import laboratories.FlowerPack;
+import laboratories.Rose;
 import java.util.Random;
 
 public class FlowerBucketTest {
@@ -15,12 +17,13 @@ public class FlowerBucketTest {
     public void init() {
         flowerBucket = new FlowerBucket();
     }
+    private static final int FLOWER_PRICE = 10;
 
     @Test
     public void testPrice() {
         int quantity = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
         Flower flower = new Rose();
-        flower.setPrice(10);
+        flower.setPrice(FLOWER_PRICE);
         FlowerPack flowerPack = new FlowerPack(flower, quantity);
         flowerBucket.add(flowerPack);
         Assertions.assertEquals(10 * quantity, flowerBucket.getPrice());
