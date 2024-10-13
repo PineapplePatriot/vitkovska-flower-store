@@ -9,6 +9,7 @@ import java.util.Random;
 
 public class FlowerBucketTest {
     private static final int MAX_QUANTITY = 1000;
+    private static final int FLOWER_PRICE = 10;
     private static final Random RANDOM_GENERATOR = new Random();
 
     private FlowerBucket flowerBucket;
@@ -17,7 +18,6 @@ public class FlowerBucketTest {
     public void init() {
         flowerBucket = new FlowerBucket();
     }
-    private static final int FLOWER_PRICE = 10;
 
     @Test
     public void testPrice() {
