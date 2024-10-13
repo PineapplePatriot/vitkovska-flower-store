@@ -27,6 +27,6 @@ public class FlowerBucketTest {
         flower.setPrice(FLOWER_PRICE);
         FlowerPack flowerPack = new FlowerPack(flower, quantity);
         flowerBucket.add(flowerPack);
-        Assertions.assertEquals(10 * quantity, flowerBucket.getPrice());
+        Assertions.assertEquals(FLOWER_PRICE * quantity, flowerBucket.getPrice());
     }
 }
